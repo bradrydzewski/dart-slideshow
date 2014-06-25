@@ -1,0 +1,16 @@
+image: dart
+script:
+  - pub install
+  - dartanalyzer web/slideshow.dart
+  - pub build
+
+publish:
+  s3:
+    acl: public-read
+    region: us-east-1
+    bucket: googleio.bradrydzewski.com
+    access_key: $AWS_KEY
+    secret_key: $AWS_SECRET
+    source: build
+    target: slideshow/
+    recursive: true

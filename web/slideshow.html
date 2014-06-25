@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideshow</title>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <style>
+      .frame {
+        position:absolute;
+        top:0px;
+        left:0px;
+        right:0px;
+        bottom:200px;
+        background:black;
+        text-align:center;
+      }
+      .frame img {
+        height:100%;
+      }
+      .slideshow {
+        overflow-x:scroll;
+        overflow-y:hidden;
+        white-space:nowrap;
+        position:absolute;
+        bottom:0px;
+        left:0px;
+        right:0px;
+        height:200px;
+        background:black;
+      }
+      .slides {
+        padding:0px;
+        margin:0px;
+      }
+      .slides li {
+        margin-top:20px;
+        margin-left:20px;
+        display:inline-block;
+      }
+      .slides img {
+        width: 200px;
+      }
+    </style>
+  </head>
+ 
+  <body>   
+    <div class="frame">
+      <img id="photo" />
+    </div>
+    <div id="test" class="slideshow">
+        <ul class="slides"></ul>
+    </div>
+    <script type="application/dart" src="slideshow.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

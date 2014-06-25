@@ -1,0 +1,7 @@
+name: photo_booth_slideshow
+version: 0.0.1
+dependencies:
+  browser: any
+  unittest: any
+  firebase: any
+  slideshow: any
