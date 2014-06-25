@@ -3,7 +3,6 @@ script:
   - pub install
   - dartanalyzer web/slideshow.dart
   - pub build
-  - cp web/slideshow.dart build/
 
 publish:
   s3:
