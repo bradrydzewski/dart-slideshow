@@ -47,5 +47,6 @@ main() {
     ImageElement img = list.children.elementAt(current).firstChild;
     ImageElement photo = querySelector("#photo");
     photo.src = img.src;
+    img.scrollIntoView();
   });
 }
